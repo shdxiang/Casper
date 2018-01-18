@@ -71,7 +71,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 980px;
     width: 100%;
 }
 
@@ -552,7 +552,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-header {
     margin: 0 auto;
     padding: 6vw 3vw 3vw;
-    max-width: 1040px;
+    max-width: 980px;
     text-align: center;
 }
 @media (max-width: 500px) {
@@ -578,6 +578,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-title {
     margin: 0;
     color: color(var(--darkgrey) l(-5%));
+    font-size: 3.6rem;
+
 }
 
 .date-divider {
@@ -610,7 +612,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 70px 100px 0;
+    /* padding: 70px 100px 0; */
     min-height: 230px;
     font-family: Georgia, serif;
     font-size: 2.2rem;
@@ -619,9 +621,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 @media (max-width: 1170px) {
-    .post-full-content {
+    /* .post-full-content {
         padding: 5vw 7vw 0;
-    }
+    } */
 }
 @media (max-width: 800px) {
     .post-full-content {
@@ -670,7 +672,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 920px;
+    /* max-width: 920px; */
 }
 
 .post-full-content h1,
@@ -698,11 +700,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0;
 }
 
-.post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-
 .post-full-content a {
     color: #000;
     box-shadow: var(--blue) 0 -1px 0 inset;
@@ -727,18 +724,18 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin-top: 0;
 }
 
-.post-full-content img,
+/* .post-full-content img,
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1040px;
+    max-width: 980px;
 }
-@media (max-width: 1040px) {
+@media (max-width: 980px) {
     .post-full-content img,
     .post-full-content video {
         width: 100%;
     }
-}
+} */
 
 
 /* Full bleed images (#full)
@@ -803,7 +800,7 @@ Usage (In Ghost editor):
 
 .post-full-content pre {
     overflow-x: auto;
-    margin: 1.5em 0 3em;
+    margin: 0 0 2em;
     padding: 20px;
     max-width: 100%;
     border: color(var(--darkgrey) l(-10%)) 1px solid;
@@ -826,7 +823,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content .fluid-width-video-wrapper {
-    margin: 1.5em 0 3em;
+    margin: 0 0 1.5em;
 }
 
 .post-full-content hr {
@@ -1153,8 +1150,8 @@ Usage (In Ghost editor):
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 3vw 0 6vw 0;
-    max-width: 840px;
+    padding: 3vw 0 3vw 0;
+    /* max-width: 840px; */
 }
 
 .author-card {
@@ -1218,7 +1215,7 @@ Usage (In Ghost editor):
 
 .post-full-comments {
     margin: 0 auto;
-    max-width: 840px;
+    /* max-width: 840px; */
 }
 
 
