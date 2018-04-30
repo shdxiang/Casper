@@ -35,6 +35,16 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 {{content}}
             </section>
+            <!--  Make images align center -->
+            <script type="text/javascript">
+                const xpath = '//*[@id="site-main"]/div/article/section[1]/div/p/img'
+                const iterator = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null)
+                let img = iterator.iterateNext()
+                while (img) {
+                  img.parentElement.style.textAlign = 'center'
+                  img = iterator.iterateNext()
+                }
+            </script>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
