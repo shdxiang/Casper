@@ -614,7 +614,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     /* padding: 70px 100px 0; */
     min-height: 230px;
     font-family: Georgia, serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.6em;
     background: #fff;
 }
@@ -626,7 +626,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -800,7 +800,7 @@ Usage (In Ghost editor):
 .post-full-content pre {
     overflow-x: auto;
     margin: 0 0 1em;
-    padding: 20px;
+    padding: 12px;
     max-width: 100%;
     font-size: 1.6rem;
     line-height: 1.6em;
@@ -864,7 +864,7 @@ Usage (In Ghost editor):
 
 .post-full-content h2 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -875,7 +875,7 @@ Usage (In Ghost editor):
 
 .post-full-content h3 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -886,7 +886,7 @@ Usage (In Ghost editor):
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -902,7 +902,7 @@ Usage (In Ghost editor):
     border: 0;
     color: var(--blue);
     font-family: Georgia,serif;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     line-height: 1.35em;
     text-align: center;
 }
@@ -921,7 +921,7 @@ Usage (In Ghost editor):
 
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
