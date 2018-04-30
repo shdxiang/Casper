@@ -225,6 +225,15 @@ $(document).ready(function () {
     window.addEventListener('resize', onResize, false);
 
     update();
+
+    // Replace the submit button
+    let submit = $(":submit")[0]
+    submit.style.display = 'none'
+    $('.post-action').append('<a id="submit" class="author-card-button" href="#">Submit</a>')
+    $('#submit').click(function() {
+      submit.click();
+      return false;
+    })
 });
 </script>
 {{/contentFor}}
