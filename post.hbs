@@ -70,7 +70,7 @@ into the {body} of the default.hbs template --}}
             </footer>
 
             <section class="post-full-comments">
-                <div id="disqus_thread"></div>
+                <!-- <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
                         this.page.url = '{{url absolute="true"}}';
@@ -82,7 +82,13 @@ into the {body} of the default.hbs template --}}
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
+                </script> -->
+                <script src="//isso.xiaoxiang.io/js/embed.min.js"
+                  data-isso="//isso.xiaoxiang.io/"
+                  data-isso-require-author="true"
+                  data-isso-avatar="true">
                 </script>
+                <section id="isso-thread"></section>
             </section>
 
         </article>
