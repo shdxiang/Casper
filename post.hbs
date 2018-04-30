@@ -218,11 +218,15 @@ $(document).ready(function () {
     update();
 
     // Replace the submit button
-    let submit = $(":submit")[0]
-    submit.style.display = 'none'
+    let submitOld = $(":submit")[0]
+    submitOld.style.display = 'none'
+
     $('.post-action').append('<a id="submit" class="author-card-button" href="#">Submit</a>')
+    let submitNew = $('.post-action')[0];
+    submitNew.style.textAlign = 'center'
+
     $('#submit').click(function() {
-      submit.click();
+      submitOld.click();
       return false;
     })
 });
