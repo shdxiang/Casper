@@ -768,8 +768,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .kg-card-markdown {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* max-width: 920px; */
+    /* align-items: center; */
+    align-items: stretch;
 }
 
 .post-full-content h1,

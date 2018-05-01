@@ -160,7 +160,7 @@ into the {body} of the default.hbs template --}}
 // Replace the submit button
 $("#isso-thread").bind("DOMNodeInserted", function(e){
   let submitOld = $(e.target).find(":submit")[0]
-  if (submitOld) {
+  if (submitOld && submitOld.style.display !== 'none') {
     submitOld.style.display = 'none'
 
     let parent = submitOld.parentElement
