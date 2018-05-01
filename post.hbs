@@ -157,6 +157,24 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
 <script>
 
+// Replace the submit button
+$("#isso-thread").bind("DOMNodeInserted", function(e){
+  let submitOld = $(e.target).find(":submit")[0]
+  if (submitOld) {
+    submitOld.style.display = 'none'
+
+    let parent = submitOld.parentElement
+    parent.style.textAlign = 'center'
+
+    let submitNew = $('<a id="submit" class="author-card-button" href="#">Submit</a>')
+    $(submitNew).click(function() {
+      submitOld.click()
+      return false
+    })
+    $(parent).append(submitNew)
+  }
+})
+
 // NOTE: Scroll performance is poor in Safari
 // - this appears to be due to the events firing much more slowly in Safari.
 //   Dropping the scroll event and using only a raf loop results in smoother
@@ -216,19 +234,6 @@ $(document).ready(function () {
     window.addEventListener('resize', onResize, false);
 
     update();
-
-    // Replace the submit button
-    let submitOld = $(":submit")[0]
-    submitOld.style.display = 'none'
-
-    $('.post-action').append('<a id="submit" class="author-card-button" href="#">Submit</a>')
-    let submitNew = $('.post-action')[0];
-    submitNew.style.textAlign = 'center'
-
-    $('#submit').click(function() {
-      submitOld.click();
-      return false;
-    })
 });
 </script>
 {{/contentFor}}
