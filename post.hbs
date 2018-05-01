@@ -35,16 +35,6 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 {{content}}
             </section>
-            <!--  Make images align center -->
-            <script type="text/javascript">
-                const xpath = '//*[@id="site-main"]/div/article/section[1]/div/p/img'
-                const iterator = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null)
-                let img = iterator.iterateNext()
-                while (img) {
-                  img.parentElement.style.textAlign = 'center'
-                  img = iterator.iterateNext()
-                }
-            </script>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
@@ -156,6 +146,13 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
+
+// Make images align center
+let card = $('.kg-card-markdown')
+let images = $(card).find('img')
+for (let i = 0; i < images.length; i++) {
+  images[i].parentElement.style.textAlign = 'center'
+}
 
 // Replace the submit button
 $("#isso-thread").bind("DOMNodeInserted", function(e){
