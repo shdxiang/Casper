@@ -845,16 +845,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 980px;
+    max-width: 100%;
     height: auto;
 }
-@media (max-width: 980px) {
-    .post-full-content img,
-    .post-full-content video {
-        max-width: 100%;
-    }
-}
-
 
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
