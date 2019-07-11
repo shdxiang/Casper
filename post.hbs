@@ -18,13 +18,13 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
+                <h1 class="post-full-title">{{title}}</h1>
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
                 </section>
-                <h1 class="post-full-title">{{title}}</h1>
             </header>
 
             {{#if feature_image}}
@@ -75,11 +75,14 @@ into the {body} of the default.hbs template --}}
 
             </footer>
 
-            {{!--
             <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
+              <script src="//isso.xiaoxiang.io/js/embed.min.js"
+                data-isso="//isso.xiaoxiang.io/"
+                data-isso-require-author="true"
+                data-isso-avatar="true">
+              </script>
+              <section id="isso-thread"></section>
             </section>
-            --}}
 
         </article>
 
@@ -145,6 +148,22 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
+
+// Replace the submit button
+$("#isso-thread").bind("DOMNodeInserted", function(e){
+  let submitOld = $(e.target).find(":submit")[0]
+  if (submitOld && submitOld.style.display !== 'none') {
+    submitOld.style.display = 'none'
+    let parent = submitOld.parentElement
+    parent.style.textAlign = 'center'
+    let submitNew = $('<a id="submit" class="author-card-button" href="#">Submit</a>')
+    $(submitNew).click(function() {
+      submitOld.click()
+      return false
+    })
+    $(parent).append(submitNew)
+  }
+})
 
 // NOTE: Scroll performance is poor in Safari
 // - this appears to be due to the events firing much more slowly in Safari.

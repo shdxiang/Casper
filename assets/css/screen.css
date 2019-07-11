@@ -74,7 +74,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 980px;
     width: 100%;
 }
 
@@ -676,7 +676,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-header {
     margin: 0 auto;
     padding: 6vw 3vw 3vw;
-    max-width: 1040px;
+    max-width: 980px;
     text-align: center;
 }
 @media (max-width: 500px) {
@@ -696,12 +696,12 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-meta-date {
-    color: var(--blue);
 }
 
 .post-full-title {
     margin: 0;
     color: color(var(--darkgrey) l(-5%));
+    font-size: 3.6rem;
 }
 
 .date-divider {
@@ -741,22 +741,16 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 70px 100px 0;
     min-height: 230px;
     font-family: Georgia, serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.6em;
     background: #fff;
 }
 
-@media (max-width: 1170px) {
-    .post-full-content {
-        padding: 5vw 7vw 0;
-    }
-}
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -851,13 +845,13 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1040px;
+    max-width: 980px;
     height: auto;
 }
-@media (max-width: 1040px) {
+@media (max-width: 980px) {
     .post-full-content img,
     .post-full-content video {
-        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -920,7 +914,7 @@ Usage (In Ghost editor):
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
-    background: var(--whitegrey);
+    background: #f0f0f0;
     border-radius: 3px;
 }
 
@@ -930,15 +924,13 @@ Usage (In Ghost editor):
 
 .post-full-content pre {
     overflow-x: auto;
-    margin: 1.5em 0 3em;
-    padding: 20px;
+    margin: 0 0 1em;
+    padding: 12px;
     max-width: 100%;
-    border: color(var(--darkgrey) l(-10%)) 1px solid;
-    color: var(--whitegrey);
-    font-size: 1.4rem;
-    line-height: 1.5em;
-    background: color(var(--darkgrey) l(-3%));
-    border-radius: 5px;
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    background: #f0f0f0;
+    border-radius: 3px;
 }
 
 .post-full-content pre code {
@@ -953,7 +945,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content .fluid-width-video-wrapper {
-    margin: 1.5em 0 3em;
+    margin: 0 0 1.5em;
 }
 
 .post-full-content hr {
@@ -997,7 +989,7 @@ Usage (In Ghost editor):
 
 .post-full-content h2 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -1008,7 +1000,7 @@ Usage (In Ghost editor):
 
 .post-full-content h3 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -1019,7 +1011,7 @@ Usage (In Ghost editor):
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -1035,7 +1027,7 @@ Usage (In Ghost editor):
     border: 0;
     color: var(--blue);
     font-family: Georgia,serif;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     line-height: 1.35em;
     text-align: center;
 }
@@ -1054,7 +1046,7 @@ Usage (In Ghost editor):
 
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -1280,8 +1272,7 @@ Usage (In Ghost editor):
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 3vw 0 6vw 0;
-    max-width: 840px;
+    padding: 3vw 0 3vw 0;
 }
 
 /* 7.2.1 Single Author Byline
@@ -1479,7 +1470,6 @@ Usage (In Ghost editor):
 
 .post-full-comments {
     margin: 0 auto;
-    max-width: 840px;
 }
 
 
@@ -1840,11 +1830,6 @@ Usage (In Ghost editor):
     flex-direction: column;
     align-items: center;
     max-width: 920px;
-}
-
-.post-template .post-content > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
 }
 
 .post-full-content .kg-image {
